@@ -29,6 +29,13 @@ public class SortByValueInMap {
 
         System.out.println(linkedMapSortedByValue);
 
+        System.out.println(" Soritng by Value of map Java 8 fn ");
+
+        Map<String, Integer> linkedMapSortedByValueJava8 = map.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(Entry::getKey,
+                Entry::getValue, (old,N)->old, LinkedHashMap::new));
+
+        System.out.println(linkedMapSortedByValueJava8);
 
 
 
